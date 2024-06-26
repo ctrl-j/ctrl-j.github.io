@@ -31,12 +31,11 @@ twitter_username: jekyllrb
 github_username:  ctrl-j
 
 # Build settings
-theme: minima
 remote_theme: ronynn/minimal-neon
 plugins:
   - jekyll-feed
-gems:
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
