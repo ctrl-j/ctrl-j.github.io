@@ -34,8 +34,9 @@ github_username:  ctrl-j
 theme: minima
 remote_theme: ronynn/minimal-neon
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
+gems:
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.
