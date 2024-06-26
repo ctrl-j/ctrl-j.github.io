@@ -31,7 +31,7 @@ twitter_username: jekyllrb
 github_username:  ctrl-j
 
 # Build settings
-remote_theme: ronynn/minimal-neon
+remote_theme: x64onl/jekyll-piratesec
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
