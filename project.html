@@ -3,11 +3,28 @@
     <head>
         <title>ctrl-j stuff</title>
         <style>
+            h1 {text-align: center;}
+
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+
+            .flexparent {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             /* Navigation bar container */
             .navbar {
+                margin: auto;
                 overflow: hidden;
                 background-color: #333;
                 font-family: Arial;
+                
+                display: inline-block;                
             }
             /* Links inside the navbar */
             .navbar a {
@@ -33,10 +50,12 @@
                 background-color: inherit;
                 font-family: inherit; /* Important for vertical align on mobile phones */
                 margin: 0; /* Important for vertical align on mobile phones */
+            
+                display: block;
             }
             /* Add a red background color to navbar links on hover */
             .navbar a:hover, .dropdown:hover .dropbtn {
-                background-color: red;
+                background-color: rgba(13, 24, 120, 0.79);
             }
             /* Dropdown content (hidden by default) */
             .dropdown-content {
@@ -67,25 +86,27 @@
         </style>
     </head>
     <body>
-        <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <div class="dropdown">
-              <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
-          </div>
-
         <h1>project place</h1>
+
+        <div class="flexparent">
+            <div class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#news">News</a>
+                <div class="dropdown">
+                <button class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+                </div>
+            </div>
+        </div>
         <p>insert projects here</p>
         <a href="https://github.com/ctrl-j/">
-            <img src="../assets/blinkies/only_paranoid_survive.gif" alt="PROJECTS" width="300" height="40">
+            <img src="assets/blinkies/only_paranoid_survive.gif" alt="PROJECTS" title="check out mah github B)" width="300" height="40" class="center">
         </a>
     </body>
 </html>
