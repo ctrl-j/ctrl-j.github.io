@@ -2,14 +2,99 @@
 <html lang="en-US">
     <head>
         <title>ctrl-j stuff</title>
+        <style>
+            @keyframes example {
+                0%   {background-color:red; left:0px; top:200px;}
+                25%  {background-color:yellow; left:200px; top:400px;}
+                50%  {background-color:blue; left:400px; top:200px;}
+                75%  {background-color:green; left:200px; top:0px;}
+                100% {background-color:red; left:0px; top:200px;}
+            }
+
+            .dot {
+                content: '';
+                display: inline-block;
+                position: fixed;
+                animation-delay: 0s;
+
+                height: 50px;
+                width: 50px;
+                background-color: #555;
+                border-radius: 50%;
+
+                left: 250px;
+                top: 250px;
+
+                /*animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);*/
+                animation: hideimage 0.75s 1 linear;
+                animation: yAxis 5s infinite linear;
+            }
+
+            .startText::after {
+                content: '';
+                display: inline-block;
+                position: fixed;
+                
+                left: 50px;
+                top: 50px;
+
+                animation: start 0.75s 1 linear;
+            }
+
+            @keyframes start {
+                0% {
+                    content: 'fuck you';
+                }
+                100% {
+                    content: '';
+                }
+            }
+
+            @keyframes hideimage {
+                0% {
+                    visibility: hidden;
+                }
+                100% {
+                    visibility: visible;
+                }
+            }
+
+            @keyframes yAxis {
+                0% { 
+                    transform: rotate(0deg)
+                        translateY(100px) rotate(0deg); 
+                } 
+    
+                100% { 
+                    transform: rotate(360deg)
+                        translateY(100px) rotate(-360deg); 
+                }
+            }
+            
+            /* The element to apply the animation to */
+            poo {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                transition: transform 1s linear;
+
+                animation-name: example;
+                animation-duration: 4s;
+                animation-direction: reverse;
+                animation-iteration-count: infinite;
+            }   
+        </style>     
     </head>
     <body>
-        <h1>sanctum</h1>
-        <p>a place to put my work and sometimes my thoughts<br>
-        that shiiiiii crowds my mind</p>
-        <p>anotha one</p>
-        <a href="https://ctrl-j.github.io/project.html">
-            <img src="assets/blinkies/hate_bugs.gif" alt="fr*ck bugs >:(" width="300" height="40">
-        </a>
-        </body>
+        <div class="startText"></div>
+        <div class="dot"><img src="assets/schreched.jpg" width="84" height="84"></img></div>
+        <div class="dot" style="animation-delay:1.75s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>
+        <div class="dot" style="animation-delay:2.5s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>   
+        <div class="dot" style="animation-delay:3.25s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>   
+        <div class="dot" style="animation-delay:4s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>   
+        <div class="dot" style="animation-delay:4.75s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>   
+        <div class="dot" style="animation-delay:5.5s"><img src="assets/schreched.jpg" width="84" height="84"></img></div>   
+
+    </body>
 </html>
